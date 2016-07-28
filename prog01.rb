@@ -37,12 +37,14 @@ frame[0][1] = 'Y'
 
 # draw graph
 for x in 0..79 do
-###
-### 分担2
-###
+  v = 24 * f(x)
+  v = v / 79
+  y= v
+  if y < 24 then
+    frame[24-y][x] = '*'
+  end
 end
-
-# printout
+    # printout
 frame.each do |line|
   line.each do |ch|
     print ch
