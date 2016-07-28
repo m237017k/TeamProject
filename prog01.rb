@@ -32,6 +32,8 @@ frame[0][1] = 'Y'
 
 # draw func
 ###
+frame[2][4]='y='
+frame[2][5]=$func
 ### 分担3
 ###
 
