@@ -32,18 +32,20 @@ frame[0][1] = 'Y'
 
 # draw func
 ###
-frame[2][4]='y='
-frame[2][5]=$func
+frame[0][4]='y='
+frame[0][5]=$func
 ### 分担3
 ###
 
 # draw graph
-for x in 0..79 do
-  v = 24 * f(x)
-  v = v / 79
-  y= v
-  if y < 24 then
-    frame[24-y][x] = '*'
+for x in 0..79.0 do
+  v=x*24.0
+  v=v/355.5
+  y = f(v)
+  if x != 0 || y != 0  then
+    if y < 24 then
+      frame[25-y][x] = '*'
+    end  
   end
 end
     # printout
